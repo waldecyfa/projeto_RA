@@ -13,20 +13,20 @@
   </style>
 </head>
 
-<body>
+<body>     
 
 <script>
 AFRAME.registerComponent("interactions", {
   init: function () {
-    const el = this.el;
+    const el = this.el;   
     let holdInterval;
 
     const startHold = () => {
       holdInterval = setInterval(() => {
         let s = el.object3D.scale;
-        s.x += 0.05;
-        s.y += 0.05;
-        s.z += 0.05;
+        s.x += 10.15;
+        s.y += 10.15;
+        s.z += 10.15;
       }, 100);
     };
 
@@ -35,7 +35,7 @@ AFRAME.registerComponent("interactions", {
     const pulse = () => {
       el.setAttribute("animation__pulse", {
         property: "scale",
-        to: "1.2 1.2 1.2",
+        to: "20.8 20.8 20.8",
         dur: 150,
         dir: "alternate",
         loop: 2
@@ -62,7 +62,7 @@ AFRAME.registerComponent("interactions", {
   <a-marker preset="hiro">
     <a-entity
       gltf-model="#modelo3d"
-      scale="0.4 0.4 0.4"
+      scale="6.8 6.8 6.8"
       position="0 0 0"
       animation-mixer
       interactions>
